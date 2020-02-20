@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Tab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/status_being_taught" />
+
+            <TextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxAddedToAreaBook"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStatus"
+                tools:targetApi="lollipop"
+                tools:text="@tools:sample/full_names" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAddedToAreaBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:clickable="false"
+                android:paddingRight="6dp"
+                android:text="@string/switch_added_to_area_book"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStatus"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/textViewPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFullName"
+                tools:text="@tools:sample/us_phones" tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPhoneNumber"
+                tools:text="@string/edit_text_email_address" />
+
+            <TextView
+                android:id="@+id/textViewFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+                tools:text="@string/edit_text_facebook" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textViewNotes"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/textViewFacebook"-->
+                <!--tools:text="@string/edit_text_notes" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton2"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="S"-->
+                <!--android:textOn="S"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton3"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/toggleButton3" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton3"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="M"-->
+                <!--android:textOn="M"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton4"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/toggleButton4" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton4"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="T"-->
+                <!--android:textOn="T"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton5"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/toggleButton5" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton5"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="W"-->
+                <!--android:textOn="W"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton6"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/toggleButton6" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton6"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="T"-->
+                <!--android:textOn="T"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton7"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/toggleButton7" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton7"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="F"-->
+                <!--android:textOn="F"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton8"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/toggleButton8" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/toggleButton8"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:clickable="false"-->
+                <!--android:textOff="S"-->
+                <!--android:textOn="S"-->
+                <!--android:textSize="12sp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/checkBoxAddedToAreaBook" />-->
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
