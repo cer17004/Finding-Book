@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputNewPerson">
+
+    <Button
+        android:id="@+id/buttonCancelNewPerson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="onCancelButton"
+        android:text="@string/button_cancel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSaveNewPerson"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSaveNewPerson"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSaveNewPerson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onSaveButton"
+        android:text="@string/button_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancelNewPerson"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCancelNewPerson">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:hint="@string/edit_text_first_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:hint="@string/edit_text_last_name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFirstName"
+                android:importantForAutofill="no" tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:hint="@string/edit_text_phone_number"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextLastName"
+                android:importantForAutofill="no" tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:hint="@string/edit_text_email_address"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"
+                android:importantForAutofill="no" tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/editTextFacebook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:hint="@string/edit_text_facebook"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+                tools:targetApi="o" />
+
+            <Switch
+                android:id="@+id/switchAddedToAreaBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:checked="false"
+                android:switchPadding="@dimen/dimen_8dp"
+                android:text="@string/switch_added_to_area_book"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFacebook"
+                tools:checked="false" />
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/title_person_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchAddedToAreaBook" />
+
+            <RadioGroup
+                android:id="@+id/RBGroupPersonStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStatus">
+
+                <RadioButton
+                    android:id="@+id/RBMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_member" />
+
+                <RadioButton
+                    android:id="@+id/RBInvestigator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_being_taught" />
+
+                <RadioButton
+                    android:id="@+id/RBNotBeingTaught"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_not_being_taught" />
+
+                <RadioButton
+                    android:id="@+id/RBHasInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_interest" />
+
+                <RadioButton
+                    android:id="@+id/RBSoftClosed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_soft_closed" />
+
+                <RadioButton
+                    android:id="@+id/RBHardClosed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_hard_closed" />
+
+                <RadioButton
+                    android:id="@+id/RBUncontacted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_uncontacted" />
+            </RadioGroup>
+
+            <!--<TextView-->
+                <!--android:id="@+id/textViewAvailability"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:text="@string/title_person_availability"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/RBGroupPersonStatus" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilitySunday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:textOff="@string/button_availability_sunday"-->
+                <!--android:textOn="@string/button_availability_sunday"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/availabilityMonday"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/availabilityMonday"-->
+                <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilityMonday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textOff="@string/button_availability_monday"-->
+                <!--android:textOn="@string/button_availability_monday"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/availabilityTuesday"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/availabilityTuesday"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/availabilitySunday" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilityTuesday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textOff="@string/button_availability_tuesday"-->
+                <!--android:textOn="@string/button_availability_tuesday"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/availabilityWednesday"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/availabilityWednesday"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/availabilityMonday" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilityWednesday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textOff="@string/button_availability_wednesday"-->
+                <!--android:textOn="@string/button_availability_wednesday"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/availabilityThursday"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/availabilityThursday"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/availabilityTuesday" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilityThursday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textOff="@string/button_availability_thursday"-->
+                <!--android:textOn="@string/button_availability_thursday"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/availabilityFriday"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/availabilityFriday"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/availabilityWednesday" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilityFriday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textOff="@string/button_availability_friday"-->
+                <!--android:textOn="@string/button_availability_friday"-->
+                <!--app:layout_constraintBaseline_toBaselineOf="@+id/availabilitySaturday"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/availabilitySaturday"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/availabilityThursday" />-->
+
+            <!--<ToggleButton-->
+                <!--android:id="@+id/availabilitySaturday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:textOff="@string/button_availability_saturday"-->
+                <!--android:textOn="@string/button_availability_saturday"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/availabilityFriday"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/textViewAvailability" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/editTextPersonNotes"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:ems="10"-->
+                <!--android:hint="@string/edit_text_notes"-->
+                <!--android:importantForAutofill="no"-->
+                <!--android:inputType="textMultiLine"-->
+                <!--android:singleLine="false"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/availabilitySunday"-->
+                <!--tools:targetApi="o" />-->
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
