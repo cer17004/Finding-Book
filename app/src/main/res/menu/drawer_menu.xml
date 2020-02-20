@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:checkableBehavior="single"
+        android:title="Pins">
+        <item android:id="@+id/nav_allPins"
+              android:icon="@drawable/ic_pin_drop"
+              android:title="Drop All Pins"/>
+        <item android:id="@+id/nav_citiesView"
+              android:icon="@drawable/ic_filter_view"
+              android:title="Cities View"/>
+    </item>
+</menu>
