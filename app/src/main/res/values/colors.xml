@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#479A5F</color>
+    <color name="colorPrimaryDark">#416D46</color>
+    <color name="colorAccent">#1BA2D8</color>
+    <color name="colorStatusHardClosed">#AC7063</color>
+    <color name="colorStatusSoftClosed">#6A4F39</color>
+    <color name="colorStatusInvestigator">#446B55</color>
+    <color name="colorStatusHasInterest">#7E7E7E</color>
+    <color name="colorStatusMember">#475F9C</color>
+    <color name="colorStatusUncontacted">#355577</color>
+</resources>
